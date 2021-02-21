@@ -1,3 +1,5 @@
+# Easy
+
 ## Solve Me First
 
 ```python
@@ -119,4 +121,18 @@ def timeConversion(s):
         hour = "0"+str(hour)
     output = str(hour)+s[2:8]
     return output
+```
+
+## Compare the Triplets
+
+```python
+def compareTriplets(a, b):
+    alice = 0
+    bob = 0
+    for i in range(0,len(a)):
+        if a[i] > b[i]:
+            alice += 1
+        if b[i] > a[i]:
+            bob += 1
+    return [alice,bob]
 ```
