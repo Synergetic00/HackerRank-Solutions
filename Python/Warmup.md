@@ -5,7 +5,7 @@ def solveMeFirst(a,b):
 	return a+b
 ```
 
-## Compare the Triplets
+## Simple Array Sum
 
 ```python
 def simpleArraySum(ar):
