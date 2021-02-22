@@ -6,21 +6,23 @@ import random
 import re
 import sys
 
-# Complete the countApplesAndOranges function below.
-def getTotalX(a, b):
-    # Write your code here
+# Complete the migratoryBirds function below.
+def migratoryBirds(arr):
+    count = [0,0,0,0,0]
+    for num in arr:
+        count[num-1] += 1
+    print(str(count))
+    return count.index(max(count))
+
+
+
 
 if __name__ == '__main__':
-    x1 = 43
-    v1 = 2
-    x2 = 70
-    v2 = 2
-    print(kangaroo(x1,v1,x2,v2))
 
+    arr_count = int(input().strip())
 
+    arr = list(map(int, input().rstrip().split()))
 
+    result = migratoryBirds(arr)
 
-# if x is the offset
-# if v is the degree of increase
-
-# then 
+    print(result)
