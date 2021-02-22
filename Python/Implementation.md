@@ -137,204 +137,268 @@ def migratoryBirds(arr):
 ## Day of the Programmer
 
 ```python
+def isLeapYear(year):
+    return (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
+
+def dayOfProgrammer(year):
+    print(isLeapYear(year))
+    normal = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31
+    if (year < 1918):
+        if year % 4 == 0:
+            normal += 1
+    elif (year == 1918):
+        normal -= 13
+    else:
+        if isLeapYear(year):
+            normal += 1
+    diff = 256 - normal
+    return str(diff)+".09."+str(year)
 ```
 
 ## Bill Division
 
 ```python
+def bonAppetit(bill, k, b):
+    total = sum(bill)
+    anna = total - bill[k]
+    half = int(anna / 2)
+    due = b - half
+    if due == 0:
+        print("Bon Appetit")
+    else:
+        print(due)
 ```
 
 ## Sales by Match
 
 ```python
+
 ```
 
 ## Drawing Book
 
 ```python
+
 ```
 
 ## Counting Valleys
 
 ```python
+
 ```
 
 ## Electronics Shop
 
 ```python
+
 ```
 
 ## Cats and a Mouse
 
 ```python
+
 ```
 
 ## Picking Numbers
 
 ```python
+
 ```
 
 ## The Hurdle Race
 
 ```python
+
 ```
 
 ## Designer PDF Viewer
 
 ```python
+
 ```
 
 ## Utopian Tree
 
 ```python
+
 ```
 
 ## Angry Professor
 
 ```python
+
 ```
 
 ## Beautiful Days at the Movies
 
 ```python
+
 ```
 
 ## Viral Advertising
 
 ```python
+
 ```
 
 ## Save the Prisoner!
 
 ```python
+
 ```
 
 ## Circular Array Rotation
 
 ```python
+
 ```
 
 ## Sequence Equation
 
 ```python
+
 ```
 
 ## Jumping on the Clouds: Revisited
 
 ```python
+
 ```
 
 ## Find Digits
 
 ```python
+
 ```
 
 ## Append and Delete
 
 ```python
+
 ```
 
 ## Sherlock and Squares
 
 ```python
+
 ```
 
 ## Library Fine
 
 ```python
+
 ```
 
 ## Cut the sticks
 
 ```python
+
 ```
 
 ## Repeated String
 
 ```python
+
 ```
 
 ## Jumping on the Clouds
 
 ```python
+
 ```
 
 ## Equalize the Array
 
 ```python
+
 ```
 
 ## ACM ICPC Team
 
 ```python
+
 ```
 
 ## Taum and B'day
 
 ```python
+
 ```
 
 ## Modified Kaprekar Numbers
 
 ```python
+
 ```
 
 ## Beautiful Triplets
 
 ```python
+
 ```
 
 ## Minimum Distances
 
 ```python
+
 ```
 
 ## Halloween Sale
 
 ```python
+
 ```
 
 ## Chocolate Feast
 
 ```python
+
 ```
 
 ## Service Lane
 
 ```python
+
 ```
 
 ## Lisa's Workbook
 
 ```python
+
 ```
 
 ## Flatland Space Stations
 
 ```python
+
 ```
 
 ## Fair Rations
 
 ```python
+
 ```
 
 ## Cavity Map
 
 ```python
+
 ```
 
 ## Manasa and Stones
 
 ```python
+
 ```
 
 ## Happy Ladybugs
 
 ```python
+
 ```
 
 ## Strange Counter
 
 ```python
+
 ```

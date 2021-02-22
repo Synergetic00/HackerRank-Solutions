@@ -6,23 +6,22 @@ import random
 import re
 import sys
 
-# Complete the migratoryBirds function below.
-def migratoryBirds(arr):
-    count = [0,0,0,0,0]
-    for num in arr:
-        count[num-1] += 1
-    print(str(count))
-    return count.index(max(count))
-
-
-
+# Complete the bonAppetit function below.
+def bonAppetit(bill, k, b):
+    total = sum(bill)
+    anna = total - bill[k]
+    half = int(anna / 2)
+    print(str(anna)+" "+str(half))
 
 if __name__ == '__main__':
+    nk = input().rstrip().split()
 
-    arr_count = int(input().strip())
+    n = int(nk[0])
 
-    arr = list(map(int, input().rstrip().split()))
+    k = int(nk[1])
 
-    result = migratoryBirds(arr)
+    bill = list(map(int, input().rstrip().split()))
 
-    print(result)
+    b = int(input().strip())
+
+    bonAppetit(bill, k, b)
