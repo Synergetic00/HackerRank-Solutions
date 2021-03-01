@@ -6,22 +6,29 @@ import random
 import re
 import sys
 
-# Complete the bonAppetit function below.
-def bonAppetit(bill, k, b):
-    total = sum(bill)
-    anna = total - bill[k]
-    half = int(anna / 2)
-    print(str(anna)+" "+str(half))
+# Complete the catAndMouse function below.
+def catAndMouse(x, y, z):
+    diffb = abs(z-y)
+    diffa = abs(z-x)
+    if diffa == diffb:
+        output = "Mouse C"
+    else:
+        output = "Cat A" if diffa < diffb else "Cat B"
+    return output
 
 if __name__ == '__main__':
-    nk = input().rstrip().split()
 
-    n = int(nk[0])
+    q = int(input())
 
-    k = int(nk[1])
+    for q_itr in range(q):
+        xyz = input().split()
 
-    bill = list(map(int, input().rstrip().split()))
+        x = int(xyz[0])
 
-    b = int(input().strip())
+        y = int(xyz[1])
 
-    bonAppetit(bill, k, b)
+        z = int(xyz[2])
+
+        result = catAndMouse(x, y, z)
+
+        print(result)

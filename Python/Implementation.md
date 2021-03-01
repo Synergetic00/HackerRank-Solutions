@@ -172,31 +172,56 @@ def bonAppetit(bill, k, b):
 ## Sales by Match
 
 ```python
-
+def sockMerchant(n, ar):
+    output = 0
+    for num in set(ar):
+        count = ar.count(num)
+        output += count // 2
+    return output
 ```
 
 ## Drawing Book
 
 ```python
-
+def pageCount(n, p):
+    return min(p//2, n//2 - p//2)
 ```
 
 ## Counting Valleys
 
 ```python
-
+def countingValleys(steps, path):
+    height = valleys = 0
+    for step in path:
+        height += 1 if step == "U" else -1
+        valleys += height == 0 and step == "U"
+    return valleys
 ```
 
 ## Electronics Shop
 
 ```python
-
+def getMoneySpent(keyboards, drives, b):
+    output = -1
+    for keyboard in keyboards:
+        for drive in drives:
+            total = keyboard + drive
+            if total <= b:
+                output = max(output, total)
+    return output
 ```
 
 ## Cats and a Mouse
 
 ```python
-
+def catAndMouse(x, y, z):
+    diffb = abs(z-y)
+    diffa = abs(z-x)
+    if diffa == diffb:
+        output = "Mouse C"
+    else:
+        output = "Cat A" if diffa < diffb else "Cat B"
+    return output
 ```
 
 ## Picking Numbers
