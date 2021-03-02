@@ -1,15 +1,33 @@
 # Easy
 
+## Smart Number
+
+```python
+
+```
+
 ## XOR Strings
 
 ```python
-def strings_xor(s, t):
-    res = ""
-    for i in range(len(s)):
-        if s[i] == t[i]:
-            res += '0'
-        else:
-            res += '1'
 
-    return res
 ```
+
+# Medium
+
+## Minimum Operations
+
+```python
+
+```
+
+## Prime Dates
+
+```python
+
+```
+
+## Zig Zag Sequence
+
+```python
+
+``s
