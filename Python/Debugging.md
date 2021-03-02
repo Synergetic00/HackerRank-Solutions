@@ -1,5 +1,9 @@
-Smart Number
-XOR Strings
-Minimum Operations
-Prime Dates
-Zig Zag Sequence
+# Easy
+
+## Smart Number
+## XOR Strings
+# Medium
+
+## Minimum Operations
+## Prime Dates
+## Zig Zag Sequence
