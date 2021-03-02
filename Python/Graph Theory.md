@@ -16,6 +16,8 @@
 ## Snakes and Ladders: The Quickest Way Up
 ## Synchronous Shopping
 ## The Story of a Tree
+# Hard
+
 ## ByteLandian Tours
 ## Computer Game
 ## Demanding Money
@@ -42,6 +44,8 @@
 ## Travel in HackerLand
 ## Tree Flow
 ## Tripartite Matching
+# Advanced
+
 ## Bead Ornaments
 ## Favorite sequence
 ## Jogging Cats
@@ -49,6 +53,8 @@
 ## Liars
 ## Quadrant Queries
 ## Tree Splitting
+# Expert
+
 ## Airports
 ## Alex vs Fedor
 ## Coprime Paths

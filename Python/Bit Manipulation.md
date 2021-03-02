@@ -16,6 +16,8 @@
 ## Winning Lottery Ticket
 ## Xor-sequence
 ## Yet Another Minimax Problem
+# Hard
+
 ## Manipulative Numbers
 ## Maximizing the Function
 ## Mixing proteins
@@ -23,9 +25,13 @@
 ## String Transmission
 ## XOR Matrix
 ## Xoring Ninja
+# Advanced
+
 ## 2's complement
 ## Changing Bits
 ## XOR key
 ## XOR Subsequences
+# Expert
+
 ## Hamming Distance
 ## Iterate It

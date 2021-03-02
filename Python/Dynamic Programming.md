@@ -39,6 +39,8 @@
 ## Two Robots
 ## Wet Shark and Two Subsequences
 ## Xor and Sum
+# Hard
+
 ## A Super Hero
 ## Alien Languages
 ## Angry Children 2
@@ -70,6 +72,8 @@
 ## Tara's Beautiful Permutations
 ## Turn Off the Lights
 ## Zurikela's Graph
+# Advanced
+
 ## Best spot
 ## Billboards
 ## Dorsey Thief
@@ -90,6 +94,8 @@
 ## Unfair Game
 ## Unique Divide And Conquer
 ## Vim War
+# Expert
+
 ## Count Scorecards
 ## Counting Road Networks
 ## Counting the Ways

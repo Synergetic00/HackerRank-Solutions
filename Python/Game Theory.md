@@ -27,10 +27,14 @@
 ## Tower Breakers, Revisited!
 ## Vertical Rooks
 ## Zero-Move Nim
+# Hard
+
 ## Chocolate Game
 ## Move the Coins
 ## Simple Game
 ## Stone Division
 ## Stone Piles
 ## The Prime Game
+# Expert
+
 ## Tastes Like Winning

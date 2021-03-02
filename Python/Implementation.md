@@ -67,4 +67,6 @@
 ## The Bomberman Game
 ## The Grid Search
 ## The Time in Words
+# Hard
+
 ## Matrix Layer Rotation

@@ -19,10 +19,14 @@
 ## Goodland Electricity
 ## Greedy Florist
 ## Max Min
+# Hard
+
 ## Accessory Collection
 ## Chief Hopper
 ## Cutting Boards
 ## Fighting Pits
 ## Sherlock and MiniMax
+# Advanced
+
 ## Reverse Shuffle Merge
 ## Team Formation

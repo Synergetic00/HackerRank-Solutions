@@ -29,10 +29,14 @@
 ## Maximum Palindromes
 ## Sherlock and Anagrams
 ## Sherlock and the Valid String
+# Hard
+
 ## Build a String
 ## Count Strings
 ## Determining DNA Health
 ## Gridland Provinces
+# Advanced
+
 ## Ashton and String
 ## Build a Palindrome
 ## Circular Palindromes
@@ -40,6 +44,8 @@
 ## String Function Calculation
 ## Super Functional Strings
 ## Two Two
+# Expert
+
 ## Cards Permutation
 ## Find Strings
 ## How Many Substrings?
