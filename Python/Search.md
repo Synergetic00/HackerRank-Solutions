@@ -9,7 +9,18 @@
 ## Missing Numbers
 
 ```python
-
+def missingNumbers(arr, brr):
+    output = set()
+    comb = arr + brr
+    unique = list(set(comb))
+    diff = [0 for _ in range(len(unique))]
+    for i in arr:
+        diff[unique.index(i)] += 1
+    for i in brr:
+        diff[unique.index(i)] -= 1
+    for i in range(len(diff)):
+        if diff[i] != 0: output.add(unique[i])
+    return sorted(list(output))
 ```
 
 ## Sherlock and Array

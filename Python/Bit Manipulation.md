@@ -3,25 +3,33 @@
 ## Flipping bits
 
 ```python
-
+def flippingBits(n):
+    flip = (2**32)-1
+    return n ^ flip
 ```
 
 ## Lonely Integer
 
 ```python
-
+def lonelyinteger(a):
+    output = 0
+    for i in a:
+        output ^= i
+    return output
 ```
 
 ## Maximizing XOR
 
 ```python
-
+def maximizingXor(l, r):
+    return max(a ^ b for a in range(l,r+1) for b in range(a,r+1))
 ```
 
 ## Sum vs XOR
 
 ```python
-
+def sumXor(n):
+    return 2 ** bin(n)[2:].count('0') if n else 1
 ```
 
 # Medium
