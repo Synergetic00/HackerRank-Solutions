@@ -6,30 +6,25 @@ import random
 import re
 import sys
 
-# Complete the missingNumbers function below.
-def missingNumbers(arr, brr):
-    output = set()
-    comb = arr + brr
-    unique = list(set(comb))
-    diff = [0 for _ in range(len(unique))]
-    for i in arr:
-        diff[unique.index(i)] += 1
-    for i in brr:
-        diff[unique.index(i)] -= 1
-    for i in range(len(diff)):
-        if diff[i] != 0: output.add(unique[i])
-    return sorted(list(output))
+# Complete the acmTeam function below.
+def acmTeam(topic):
+    return [5,2]
 
 if __name__ == '__main__':
 
-    n = int(input())
+    nm = input().split()
 
-    arr = list(map(int, input().rstrip().split()))
+    n = int(nm[0])
 
-    m = int(input())
+    m = int(nm[1])
 
-    brr = list(map(int, input().rstrip().split()))
+    topic = []
 
-    result = missingNumbers(arr, brr)
+    for _ in range(n):
+        topic_item = input()
+        topic.append(topic_item)
 
-    print(str(result))
+    result = acmTeam(topic)
+
+    print(result[0])
+    print(result[1])

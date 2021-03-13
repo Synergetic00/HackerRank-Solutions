@@ -219,7 +219,15 @@
 ## Picking Numbers
 
 ```python
+def pickingNumbers(a):
+    output = 0
+    for i in a:
+        cur = a.count(i)
+        prv = a.count(i-1)
 
+        if cur + prv > output:
+            output = cur + prv
+    return output
 ```
 
 ## Repeated String
