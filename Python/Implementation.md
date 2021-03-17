@@ -3,7 +3,13 @@
 ## ACM ICPC Team
 
 ```python
-
+def acmTeam(topic):
+    known = []
+    for i in range(len(topic)):
+        for j in range(i+1, len(topic)):
+            comb = int(topic[i]) + int(topic[j])
+            known.append(len(str(comb)) - str(comb).count("0"))
+    return [max(known),known.count(max(known))]
 ```
 
 ## Angry Professor

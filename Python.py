@@ -6,25 +6,22 @@ import random
 import re
 import sys
 
-# Complete the acmTeam function below.
-def acmTeam(topic):
-    return [5,2]
+# Complete the nimGame function below.
+def nimGame(pile):
+    for i in range(1,len(pile)):
+        pile[0] ^= pile[i]
+    return 'Second' if pile[0] == 0 else 'First'
 
 if __name__ == '__main__':
 
-    nm = input().split()
+    g = int(input())
 
-    n = int(nm[0])
+    for g_itr in range(g):
+        n = int(input())
 
-    m = int(nm[1])
+        pile = list(map(int, input().rstrip().split()))
 
-    topic = []
+        result = nimGame(pile)
 
-    for _ in range(n):
-        topic_item = input()
-        topic.append(topic_item)
+        print(nimGame(result))
 
-    result = acmTeam(topic)
-
-    print(result[0])
-    print(result[1])
