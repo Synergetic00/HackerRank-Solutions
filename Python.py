@@ -6,22 +6,35 @@ import random
 import re
 import sys
 
-# Complete the nimGame function below.
-def nimGame(pile):
-    for i in range(1,len(pile)):
-        pile[0] ^= pile[i]
-    return 'Second' if pile[0] == 0 else 'First'
+def cutTheSticks(arr):
+    iters = []
+    while len(arr) != 0:
+        iters.append(len(arr))
+        shortest = min(arr)
+        arr = [i for i in arr if i-shortest !=0]
+    return iters
 
-if __name__ == '__main__':
+def findDigits(n):
+    return sum(1 for digit in str(n) if int(digit) != 0 and n % int(digit) == 0)
 
-    g = int(input())
+def circularArrayRotation(a, k, queries):
+    for i in range(len(a)-k):
+        a.append(a.pop(0))
+    for query in queries:
+        print(a[query])
 
-    for g_itr in range(g):
-        n = int(input())
+def viralAdvertising(n):
+    given = 5
+    likes = 0
+    for i in range(n):
+        likes += given//2
+        given = given//2 * 3
+    return likes
 
-        pile = list(map(int, input().rstrip().split()))
+def beautifulDays(i, j, k):
+    return sum(1 for day in range(i, j+1) if abs(day-int(str(day)[::-1])) % k == 0)
 
-        result = nimGame(pile)
-
-        print(nimGame(result))
-
+#print(beautifulDays(20,23,6))
+#print(viralAdvertising(3))
+print(circularArrayRotation([1,2,3],2,[0,1,2]))
+print(findDigits(10))
