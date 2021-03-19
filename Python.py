@@ -6,6 +6,9 @@ import random
 import re
 import sys
 
+def beautifulTriplets(d, arr):
+    return sum(1 for i in arr if i+d in arr and i+2*d in arr)
+
 def cutTheSticks(arr):
     iters = []
     while len(arr) != 0:
@@ -36,5 +39,6 @@ def beautifulDays(i, j, k):
 
 #print(beautifulDays(20,23,6))
 #print(viralAdvertising(3))
-print(circularArrayRotation([1,2,3],2,[0,1,2]))
-print(findDigits(10))
+#print(circularArrayRotation([1,2,3],2,[0,1,2]))
+#print(findDigits(10))
+print(beautifulTriplets(3,[1, 2, 4, 5, 7, 8, 10]))
