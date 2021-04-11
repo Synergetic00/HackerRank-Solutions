@@ -121,7 +121,52 @@ public class Solution {
 ## Java Int to String
 
 ```java
+import java.util.*;
+import java.security.*;
+public class Solution {
+    public static void main(String[] args) {
 
+        DoNotTerminate.forbidExit();
+
+        try {
+            Scanner in = new Scanner(System.in);
+            int n = in .nextInt();
+            in.close();
+
+            //String s=???; Complete this line below
+            //Write your code here
+            String s = n + "";
+    
+            if (n == Integer.parseInt(s)) {
+                System.out.println("Good job");
+            } else {
+                System.out.println("Wrong answer.");
+            }
+        } catch (DoNotTerminate.ExitTrappedException e) {
+            System.out.println("Unsuccessful Termination!!");
+        }
+    }
+}
+
+//The following class will prevent you from terminating the code using exit(0)!
+class DoNotTerminate {
+
+    public static class ExitTrappedException extends SecurityException {
+        private static final long serialVersionUID = 1;
+    }
+
+    public static void forbidExit() {
+        final SecurityManager securityManager = new SecurityManager() {
+            @Override
+            public void checkPermission(Permission permission) {
+                if (permission.getName().contains("exitVM")) {
+                    throw new ExitTrappedException();
+                }
+            }
+        };
+        System.setSecurityManager(securityManager);
+    }
+}
 ```
 
 ## Java Loops I
@@ -204,7 +249,41 @@ public class Solution {
 ## Java Static Initializer Block
 
 ```java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
+public class Solution {
+
+static Scanner sc = new Scanner(System.in);
+static int B = sc.nextInt();
+static int H = sc.nextInt();
+static boolean flag = false;
+
+static {
+    try {
+        if (B > 0 && H > 0) {
+            flag = true;
+        } else {
+            throw new Exception("Breadth and height must be positive");
+        }
+        
+    } catch (Exception e) {
+        System.out.println(e);
+    }
+}
+
+public static void main(String[] args){
+		if(flag){
+			int area=B*H;
+			System.out.print(area);
+		}
+		
+	}//end of main
+
+}//end of class
 ```
 
 ## Java Stdin and Stdout I
