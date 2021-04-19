@@ -33,5 +33,8 @@
 ## Ruby - Enumerable - group_by
 
 ```ruby
-
+def group_by_marks(marks, pass_marks)
+   return marks.group_by {|k,v| v >= pass_marks ? "Passed" : "Failed"}
+p
+end
 ```

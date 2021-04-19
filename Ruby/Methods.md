@@ -45,7 +45,9 @@
 ## Ruby - Methods - Variable Arguments
 
 ```ruby
-
+def full_name(first, *rest)
+    rest.reduce(first) { |x,y| x+' '+y }
+end
 ```
 
 # Medium
