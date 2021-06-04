@@ -10,7 +10,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double payment = scanner.nextDouble();
@@ -21,7 +21,7 @@ public class Solution {
         NumberFormat inFormat = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
         NumberFormat cnFormat = NumberFormat.getCurrencyInstance(Locale.CHINA);
         NumberFormat frFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);
-        
+
         System.out.println("US: " + usFormat.format(payment));
         System.out.println("India: " + inFormat.format(payment));
         System.out.println("China: " + cnFormat.format(payment));
@@ -174,7 +174,7 @@ public class Solution {
             //String s=???; Complete this line below
             //Write your code here
             String s = n + "";
-    
+
             if (n == Integer.parseInt(s)) {
                 System.out.println("Good job");
             } else {
@@ -247,14 +247,14 @@ class Solution{
             int a = in.nextInt();
             int b = in.nextInt();
             int n = in.nextInt();
-            
+
             int output = a;
-            
+
             for (int j = 0; j < n; j++) {
                 output += Math.pow(2,j) * b;
                 System.out.print(output+" ");
             }
-            
+
             System.out.println();
         }
         in.close();
@@ -307,7 +307,7 @@ static {
         } else {
             throw new Exception("Breadth and height must be positive");
         }
-        
+
     } catch (Exception e) {
         System.out.println(e);
     }
@@ -318,7 +318,7 @@ public static void main(String[] args){
 			int area=B*H;
 			System.out.print(area);
 		}
-		
+
 	}//end of main
 
 }//end of class

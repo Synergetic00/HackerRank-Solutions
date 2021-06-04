@@ -64,7 +64,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class Solution {
-    
+
     public static boolean negTotal(int[] input) {
         int total = 0;
         for (int i : input) total += i;

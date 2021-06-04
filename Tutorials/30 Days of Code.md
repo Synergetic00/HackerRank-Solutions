@@ -12,18 +12,18 @@ import java.util.regex.*;
 public class Solution {
 	public static void main(String[] args) {
         // Create a Scanner object to read input from stdin.
-		Scanner scan = new Scanner(System.in); 
-		
-		// Read a full line of input from stdin and save it to our variable, inputString.
-		String inputString = scan.nextLine(); 
+		Scanner scan = new Scanner(System.in);
 
-		// Close the scanner object, because we've finished reading 
+		// Read a full line of input from stdin and save it to our variable, inputString.
+		String inputString = scan.nextLine();
+
+		// Close the scanner object, because we've finished reading
         // all of the input from stdin needed for this challenge.
-		scan.close(); 
-      
+		scan.close();
+
 		// Print a string literal saying "Hello, World." to stdout.
 		System.out.println("Hello, World.");
-      
+
 	    // TODO: Write a line of code here that prints the contents of inputString to stdout.
         System.out.println(inputString);
 	}
@@ -41,11 +41,11 @@ public class Solution {
 using namespace std;
 int main() {
     // Declare a variable named 'input_string' to hold our input.
-    string input_string; 
-    
+    string input_string;
+
     // Read a full line of input from stdin (cin) and save it to our variable, input_string.
-    getline(cin, input_string); 
-    
+    getline(cin, input_string);
+
     // Print a string literal saying "Hello, World." to stdout using cout.
     cout << "Hello, World." << endl;
 
@@ -92,17 +92,17 @@ print(input_string)
 
 int main() {
     // Declare a variable named 'input_string' to hold our input.
-    char input_string[105]; 
-    
+    char input_string[105];
+
     // Read a full line of input from stdin and save it to our variable, input_string.
-    scanf("%[^\n]", input_string); 
-    
+    scanf("%[^\n]", input_string);
+
     // Print a string literal saying "Hello, World." to stdout using printf.
     printf("Hello, World.\n");
-    
+
     // TODO: Write a line of code here that prints the contents of input_string to stdout.
     printf("%s", input_string);
-    
+
     return 0;
 }
 ```
@@ -117,14 +117,14 @@ using System.IO;
 class Solution {
     static void Main(String[] args) {
         // Declare a variable named 'inputString' to hold our input.
-        String inputString; 
-        
+        String inputString;
+
         // Read a full line of input from stdin (cin) and save it to our variable, input_string.
-        inputString = Console.ReadLine(); 
-        
+        inputString = Console.ReadLine();
+
         // Print a string literal saying "Hello, World." to stdout using cout.
         Console.WriteLine("Hello, World.");
-        
+
         // TODO: Write a line of code here that prints the contents of input_string to stdout.
         Console.WriteLine(inputString);
     }

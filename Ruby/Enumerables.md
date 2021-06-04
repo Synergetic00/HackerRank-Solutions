@@ -6,7 +6,7 @@
 def iterate_colors(colors)
     arr = []
     colors.each{|color| arr.push(color)}
-    return arr 
+    return arr
 end
 ```
 

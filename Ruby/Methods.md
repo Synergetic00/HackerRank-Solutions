@@ -8,7 +8,7 @@ def factorial
 end
 
 n = gets.to_i
-factorial do 
+factorial do
     puts (1..n).reduce(1) {|s, i| s * i}
 end
 ```
@@ -40,7 +40,7 @@ my_proc = proc { puts "This message remembers message :: #{message}" }
 proc_message_printer(my_proc)
 
 # Lambda
-    
+
 def lambda_message_printer(my_lambda)
     message = "Welcome to Lambda Message Printer"
     my_lambda.call # Called
@@ -83,7 +83,7 @@ input_number_1 = gets.to_i
 input_number_2 = gets.to_i
 input_hash = eval(gets)
 
-a = square.(input_number_1); b = plus_one.(input_number_2);c = into_2.(input_number_1); 
+a = square.(input_number_1); b = plus_one.(input_number_2);c = into_2.(input_number_1);
 d = adder.(input_number_1, input_number_2);e = values_only.(input_hash)
 
 p a; p b; p c; p d; p e
@@ -164,10 +164,10 @@ end
 def convert_temp(temp, input_scale:, output_scale:)
     input = input_scale[0]
     output = output_scale[0]
-    
+
     val = temp.to_f
     res = 0
-    
+
     # to celcius
     case input
         when "k"
@@ -175,7 +175,7 @@ def convert_temp(temp, input_scale:, output_scale:)
         when "f"
             res = (val - 32) * (5/9.0);
     end
-    
+
     #from celcius
     case output
         when "k"
@@ -183,7 +183,7 @@ def convert_temp(temp, input_scale:, output_scale:)
         when "f"
             res = (res / (9/5.0)) + 32;
     end
-    
+
     return res
 end
 ```

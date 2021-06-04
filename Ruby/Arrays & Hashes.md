@@ -89,12 +89,12 @@ end
 
 ```ruby
 def end_arr_delete(arr)
-    return arr.pop    
+    return arr.pop
 end
 
 def start_arr_delete(arr)
     return arr.shift
-    
+
 end
 
 def delete_at_arr(arr, index)

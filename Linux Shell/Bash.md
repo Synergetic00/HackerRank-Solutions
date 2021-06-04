@@ -99,7 +99,7 @@ echo $input | bc -l | xargs printf "%.3f"
 
 ```bash
 read n
-arr=($(cat)) 
+arr=($(cat))
 arr=${arr[*]}
 echo $((${arr// /+}))/$n | bc -l | xargs printf "%.3f"
 ```
