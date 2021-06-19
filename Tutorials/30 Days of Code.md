@@ -174,6 +174,8 @@ print "Hello, World.\n";
 print "${inputString}"
 ```
 
+## Haskell
+
 ```
 -- Enter your code here. Read input from STDIN. Print output to STDOUT
 import System.IO
