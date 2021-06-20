@@ -129,13 +129,28 @@ def catAndMouse(x, y, z):
 ## Cavity Map
 
 ```python
-
+def cavityMap(grid):
+    output = []
+    for item in grid:
+        output.append(item)
+    for i in range(1,len(grid)-1):
+        for j in range(1,len(grid)-1):
+            maxEdge = max(output[i-1][j], output[i+1][j], output[i][j-1], output[i][j+1])
+            if output[i][j] > maxEdge:
+                output[i] = output[i][:j] +'X' + output[i][j+1:]      
+    return output
 ```
 
 ## Chocolate Feast
 
 ```python
-
+def chocolateFeast(n, c, m):
+    total = n // c
+    wrap = total
+    while wrap >= m:
+        total += wrap // m
+        wrap = wrap // m + (wrap % m)
+    return total
 ```
 
 ## Circular Array Rotation
@@ -234,13 +249,22 @@ def getMoneySpent(keyboards, drives, b):
 ## Equalize the Array
 
 ```python
-
+def equalizeArray(arr):
+    return len(arr)-max([arr.count(i) for i in arr])
 ```
 
 ## Fair Rations
 
 ```python
-
+def fairRations(B):
+    if (len([i for i in B if i % 2 == 1]) % 2):
+        return 'NO'
+    count = 0
+    for i in range(len(B)):
+        if B[i] % 2 == 1:
+            count += 2
+            B[i+1] += 1
+    return str(count)
 ```
 
 ## Find Digits
@@ -290,7 +314,14 @@ def processGrade(grade):
 ## Jumping on the Clouds: Revisited
 
 ```python
-
+def jumpingOnClouds(c, k):
+    e = 100
+    i = k % n
+    e -= c[i] * 2 + 1
+    while i != 0:
+        i = (i + k) % n
+        e -= c[i] * 2 + 1
+    return e
 ```
 
 ## Library Fine
@@ -308,7 +339,11 @@ def processGrade(grade):
 ## Manasa and Stones
 
 ```python
-
+def stones(n, a, b):
+    output = set()
+    for i in range(n):
+        output.add((a*i) + (b*(n-1-i)))
+    return sorted(output)
 ```
 
 ## Migratory Birds
@@ -389,7 +424,8 @@ def saveThePrisoner(n, m, s):
 ## Sequence Equation
 
 ```python
-
+def permutationEquation(p):
+    return [p.index(p.index(i+1)+1)+1 for i in range(len(p))]
 ```
 
 ## Service Lane

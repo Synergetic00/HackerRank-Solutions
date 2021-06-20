@@ -479,6 +479,23 @@ function main() {
 ```
 
 # Day 1: Data Types
+
+## Python 3
+
+```python
+i = 4
+d = 4.0
+s = 'HackerRank '
+
+si = int(input())
+sd = float(input())
+ss = str(input())
+
+print(i + si)
+print(d + sd)
+print(s + ss)
+```
+
 # Day 2: Operators
 # Day 3: Intro to Conditional Statements
 # Day 4: Class vs. Instance
