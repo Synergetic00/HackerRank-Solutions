@@ -43,6 +43,7 @@ int main() {
 ```
 
 ## Python 2
+## Pypy 2
 
 ```python
 inputString = raw_input()
@@ -51,6 +52,7 @@ print inputString
 ```
 
 ## Python 3
+## Pypy 3
 
 ```python
 input_string = input()
@@ -405,22 +407,6 @@ stdin.setEncoding 'utf8'
 stdin.on 'data', (input) ->
     console.log 'Hello, World.'
     console.log input
-```
-
-## Pypy 2
-
-```py
-inputString = raw_input()
-print 'Hello, World.'
-print inputString
-```
-
-## Pypy 3
-
-```py
-inputString = input()
-print('Hello, World.')
-print(inputString)
 ```
 
 ## Elixir
