@@ -277,7 +277,13 @@ def findDigits(n):
 ## Flatland Space Stations
 
 ```python
-
+def flatlandSpaceStations(n, c):
+    c.sort()
+    res = max(c[0], n - 1 - c[-1])
+    for i in range(len(c) - 1):
+        count = (c[i + 1] - c[i]) // 2
+        res = max(count, res)
+    return res
 ```
 
 ## Grading Students
@@ -296,13 +302,29 @@ def processGrade(grade):
 ## Halloween Sale
 
 ```python
-
+def howManyGames(p, d, m, s):
+    cost = p
+    bal = s
+    out = 0
+    while bal >= 0:
+        bal -= cost
+        cost = max(cost - d, m)
+        out += 1
+    return out - 1
 ```
 
 ## Happy Ladybugs
 
 ```python
-
+def happyLadybugs(b):
+    for a in set(b):
+        if a != '_' and b.count(a) is 1:
+            return 'NO'
+    if '_' not in b:
+        for i in range(1, n-1):
+            if b[i-1] != b[i] and b[i+1] != b[i]:
+                return 'NO'
+    return 'YES'
 ```
 
 ## Jumping on the Clouds
