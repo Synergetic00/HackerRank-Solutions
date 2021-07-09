@@ -1,8 +1,6 @@
 # Day 0: Hello, World.
 
-## Java 7
-## Java 8
-## Java 15
+## Java 7 / 8 / 15
 
 ```java
 import java.io.*;
@@ -22,8 +20,7 @@ public class Solution {
 }
 ```
 
-## C++
-## C++14
+## C++ / C++14
 
 ```cpp
 #include <cmath>
@@ -42,8 +39,7 @@ int main() {
 }
 ```
 
-## Python 2
-## Pypy 2
+## Python 2 / Pypy 2
 
 ```python
 inputString = raw_input()
@@ -51,8 +47,7 @@ print 'Hello, World.'
 print inputString
 ```
 
-## Python 3
-## Pypy 3
+## Python 3 / Pypy 3
 
 ```python
 input_string = input()
