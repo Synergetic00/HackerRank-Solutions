@@ -51,7 +51,7 @@ public class Solution {
     
     // Hard coded since the test input data has changed
     static final long seeds[] = {1374037200,1374037459,1057556953,1226891312,1287968623,1282073374,1287158953,1159300833,1139155438,1074640221,1040332083,1347392806,990639200,969276712,1182050116,1265867460,1257725758,1185815629};
-    
+     
     public static void main(String[] args) {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);

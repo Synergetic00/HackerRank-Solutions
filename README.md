@@ -16,7 +16,7 @@
 | Python                    | No        | 355    | 2305
 | Regex                     | No        | 0      | 710
 | Ruby                      | Yes       | 610    | 610
-| Security                  | No        | 0      | 230
+| Security                  | Yes       | 230    | 230
 | SQL                       | No        | 0      | 1130
 | 10 Days of Javascript     | Yes       | 25     | 25
 | 10 Days of Statistics     | No        | 0      | ?

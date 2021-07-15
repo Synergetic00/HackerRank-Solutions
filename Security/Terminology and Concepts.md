@@ -18,6 +18,6 @@ print(factorial(int(input())))
 
 ```python
 num = input()
-shift = int(input())
+shift = int(input()) 
 print(''.join(str((int(i)+shift)%10) for i in num))
 ```
