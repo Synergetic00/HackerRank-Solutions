@@ -330,7 +330,11 @@ def happyLadybugs(b):
 ## Jumping on the Clouds
 
 ```python
-
+def jumpingOnClouds(c):
+    path = ''.join([str(i) for i in c])
+    jumps = path.count('1')
+    jumps += sum(len(step)//2 for step in path.split('1'))
+    return jumps
 ```
 
 ## Jumping on the Clouds: Revisited
@@ -349,13 +353,30 @@ def jumpingOnClouds(c, k):
 ## Library Fine
 
 ```python
-
+def libraryFine(d1, m1, y1, d2, m2, y2):
+    fine = 0
+    if y1 != y2:
+        fine = 10000 if y1 > y2 else 0
+    elif m2 != m1:
+        fine = 500 * (m1 - m2) if m1 > m2 else 0
+    elif d2 < d1:
+        fine = 15 * (d1 - d2)
+    return fine
 ```
 
 ## Lisa's Workbook
 
 ```python
-
+def workbook(n, k, arr):
+    page = 0
+    result = 0
+    for i in range(n):
+        for j in range(arr[i]):
+            if j % k == 0:
+                page += 1
+            if page == j + 1:
+                result += 1
+    return result
 ```
 
 ## Manasa and Stones
@@ -381,13 +402,30 @@ def migratoryBirds(arr):
 ## Minimum Distances
 
 ```python
-
+def minimumDistances(a):
+    for d in range(1, len(a)):
+        for i in range(len(a) - d):
+            if a[i] == a[i+d]:
+                return d
+    return -1
 ```
 
 ## Modified Kaprekar Numbers
 
 ```python
+def isKaprekar(val):
+    digits = len(str(val))
+    square = str(val * val)
+    other = len(sqr)-d
 
+    l = 0 if other is 0 else int(sqr[:other])
+    r = int(sqr[-digits:])
+    return l + r == val
+
+def kaprekarNumbers(p, q):
+    arr = [str(i) for i in range(p, q+1) if isKaprekar(i)]
+    isValid = p <= q and len(arr) is not 0
+    print(' '.join(arr) if isValid else 'INVALID RANGE')
 ```
 
 ## Number Line Jumps
@@ -422,7 +460,8 @@ def pickingNumbers(a):
 ## Repeated String
 
 ```python
-
+def repeatedString(s, n):
+    return s.count('a') * (n // len(s)) + s[:n % len(s)].count('a')
 ```
 
 ## Sales by Match
@@ -453,19 +492,28 @@ def permutationEquation(p):
 ## Service Lane
 
 ```python
-
+def serviceLane(n, cases):
+    return [min(width[c[0]:c[1]+1]) for c in cases]
 ```
 
 ## Sherlock and Squares
 
 ```python
-
+def squares(a, b):
+    low = math.ceil(math.sqrt(a))
+    high = math.floor(math.sqrt(b))
+    return high - low + 1
 ```
 
 ## Strange Counter
 
 ```python
-
+def strangeCounter(t):
+    value = 3
+    while t > value:
+        t -= value
+        value *= 2
+    return value - t + 1
 ```
 
 ## Subarray Division
