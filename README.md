@@ -8,7 +8,7 @@
 | C++                       | No        | 10     | 1085
 | Data Structures           | No        | 0      | 7660
 | Databases                 | No        | 0      | 499
-| Distributed Systems       | No        | 0      | N/A
+| Distributed Systems       | No        | 110    | N/A
 | Functional Programming    | No        | 3      | 4012
 | Java                      | No        | 299    | 933
 | Linux Shell               | Yes       | 141    | 141

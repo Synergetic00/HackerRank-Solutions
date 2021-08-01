@@ -71,6 +71,15 @@ def rotLeft(a, d):
 ## Minimum Swaps 2
 
 ```python
+def minimumSwaps(arr):
+    count = 0
+    while arr != [n for n in range(1, n+1)]:
+        for i in range(len(arr)):
+            if arr[i] != (i+1):
+                ni = arr[i] - 1
+                arr[i], arr[ni] = arr[ni], arr[i]
+                count += 1
+    return count
 ```
 
 ## New Year Chaos
@@ -91,6 +100,22 @@ def minimumBribes(q):
 ## Array Manipulation
 
 ```python
+def arrayManipulation(n, queries):
+    maxValue = 0
+    currentValue  = 0
+    li = [0] * n
+
+    for query in queries:
+        li[query[0] - 1] += query[2]
+        if query[1] != len(li):
+            li[query[1]] -= query[2]
+
+    for i in range(len(li)):
+        currentValue  += li[i]
+        if maxValue < currentValue :
+            maxValue = currentValue 
+
+    return maxValue
 ```
 
 # Dictionaries and Hashmaps
