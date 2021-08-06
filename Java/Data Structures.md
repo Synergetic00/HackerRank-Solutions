@@ -182,13 +182,78 @@ public class Solution {
 ## Java List
 
 ```java
+import java.io.*;
+import java.util.*;
 
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+
+        List<Integer> list = new ArrayList<Integer>(N);
+        for (int i = 0; i < N; i++) {
+            list.add(sc.nextInt());
+        }
+        
+        int Q = sc.nextInt();
+        for (int i = 0; i < Q; i++) {
+            String command = sc.next();
+            switch (command) {
+                case "Insert": {
+                    int index = sc.nextInt();
+                    int value = sc.nextInt();
+                    list.add(index, value);
+                    break;
+                }
+                case "Delete": {
+                    int index = sc.nextInt();
+                    list.remove(index);
+                    break;
+                }
+            }
+        }
+        
+        sc.close();
+        
+        for (Integer i : list) {
+            System.out.print(i + " ");
+        }
+    }
+}
 ```
 
 ## Java Map
 
 ```java
+import java.util.*;
+import java.io.*;
 
+class Solution {
+    
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.valueOf(br.readLine());
+        
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        for (int i = 0; i < n; i++) {
+            String name = br.readLine();
+            int phone   = Integer.valueOf(br.readLine());
+            map.put(name, phone);
+        }
+        
+        String s;
+        while((s = br.readLine()) != null) {
+            if (map.containsKey(s)) {
+                System.out.println(s + "=" + map.get(s));
+            } else {
+                System.out.println("Not found");
+            }
+        }
+        
+        br.close();
+	}
+}
 ```
 
 ## Java Sort
@@ -263,5 +328,44 @@ public class Solution {
 ## Java Stack
 
 ```java
+import java.util.*;
+class Solution {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		while (sc.hasNext()) {
+			String input = sc.next();
+            System.out.println(isBalanced(input));
+		}		
+	}
+    
+    public static boolean isBalanced(String input) {
+            Deque<Character> stack = new ArrayDeque<Character>();
 
+            for (char c : input.toCharArray()) {
+                if (c == '{' || c == '[' || c == '(') {
+                    stack.addFirst(c);
+                } else {
+                    if (stack.isEmpty()) return false;
+                    if (stack.peekFirst() != getOpposite(c)) System.out.println(c);
+                    else stack.removeFirst();
+                }
+            }
+        
+            return stack.isEmpty();
+    }
+    
+    public static char getOpposite(char input) {
+        switch (input) {
+            case '{': return '}';
+            case '[': return ']';
+            case '(': return ')';
+            case '}': return '{';
+            case ']': return '[';
+            case ')': return '(';
+            default: return input;
+        }
+    }
+}
 ```
