@@ -10,7 +10,7 @@
 | Databases                 | No        | 0      | 499
 | Distributed Systems       | No        | 110    | N/A
 | Functional Programming    | No        | 3      | 4012
-| Java                      | No        | 673    | 933
+| Java                      | Yes       | 933    | 933
 | Linux Shell               | Yes       | 141    | 141
 | Mathematics               | No        | 0      | 15833
 | Python                    | No        | 355    | 2305
