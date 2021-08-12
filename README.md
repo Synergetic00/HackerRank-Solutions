@@ -14,7 +14,7 @@
 | Linux Shell               | Yes       | 141    | 141
 | Mathematics               | No        | 0      | 15833
 | Python                    | No        | 355    | 2305
-| Regex                     | No        | 0      | 710
+| Regex                     | No        | 380    | 710
 | Ruby                      | Yes       | 610    | 610
 | Security                  | Yes       | 230    | 230
 | SQL                       | No        | 0      | 1130
