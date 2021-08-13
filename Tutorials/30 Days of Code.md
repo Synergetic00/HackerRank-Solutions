@@ -597,26 +597,131 @@ func main() {
 ### Java 7 / 8 / 15
 
 ```java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+	
+    public static void main(String[] args) {
+        int i = 4;
+        double d = 4.0;
+        String s = "HackerRank ";
+		
+        Scanner scan = new Scanner(System.in);
+
+        int i2;
+        double d2;
+        String s2;
+        
+        i2 = scan.nextInt();
+        d2 = scan.nextDouble();
+        scan.nextLine();
+        s2 = scan.nextLine();
+        
+        System.out.println(i+i2);
+        System.out.println(d+d2);
+        System.out.println(s+s2);
+
+        scan.close();
+    }
+}
 ```
 
 ### JavaScript (Node.js)
 
 ```js
+process.stdin.resume();
+process.stdin.setEncoding('ascii');
+
+var input_stdin = "";
+var input_stdin_array = "";
+var input_currentline = 0;
+
+process.stdin.on('data', function (data) {
+    input_stdin += data;
+});
+
+process.stdin.on('end', function () {
+    input_stdin_array = input_stdin.split("\n");
+    main();    
+});
+
+// Reads complete line from STDIN
+function readLine() {
+    return input_stdin_array[input_currentline++];
+}
+
+function main() {
+    var i = 4
+    var d = 4.0
+    var s = "HackerRank "
+    
+    var i2 = +(readLine());
+    var d2 = +(readLine());
+    var s2 = readLine();
+    
+    console.log(i + i2);
+    console.log((d + d2).toFixed(1));
+    console.log(s + s2);
+
+}
 ```
 
 ### Julia
 
 ```julia
+i =  4
+d = 4.0
+s = "HackerRank"
+
+i2 = parse(Int64, readline())
+d2 = parse(Float64, readline())
+s2 = readline()
+
+println(i + i2)
+println(d + d2)
+println(s," ",s2)
 ```
 
 ### Perl
 
 ```perl
+$i = 4;
+$d = 4.0;
+$s = 'HackerRank ';
+
+$i2 = <STDIN>;
+$d2 = <STDIN>;
+$s2 = <STDIN>;
+
+print($i + $i2);
+print("\n");
+printf("%.1f\n",$d + $d2);
+print($s, $s2);
 ```
 
 ### PHP
 
 ```php
+<?php
+$handle = fopen ("php://stdin","r");
+$i = 4;
+$d = 4.0;
+$s = "HackerRank ";
+
+$i2 = fgets($handle);
+$d2 = fgets($handle);
+$s2 = fgets($handle);
+
+printf("%d\n", $i + $i2);
+printf("%.1f\n", $d + $d2);
+printf("%s%s\n", $s, $s2);
+
+fclose($handle);
+?>
 ```
 
 ### Python 2 / Pypy 2
@@ -654,26 +759,118 @@ print(s + s2)
 ### Ruby
 
 ```ruby
+i = 4
+d = 4.0
+s = 'HackerRank '
+
+i2 = gets.strip.to_i
+d2 = gets.strip.to_f
+s2 = gets.strip
+
+puts (i2 + i), (d2 + d), (s + s2)
 ```
 
 ### Scala
 
 ```scala
+object Solution {
+    def main(args: Array[String]) {
+        val i = 4
+        val d = 4.0
+        val s = "HackerRank "
+
+		val i2 = scala.io.StdIn.readInt()
+        val d2 = scala.io.StdIn.readDouble()
+        val s2 = scala.io.StdIn.readLine()
+        
+        println(i + i2)
+        println(d + d2)
+        println(s + s2)
+    }
+}
 ```
 
 ### Swift
 
 ```swift
+var i = 4
+var d = 4.0
+var s = "HackerRank "
+
+let i2 = Int(readLine()!)
+let d2 = Double(readLine()!)
+let s2 = readLine()!
+
+print(i + i2!)
+print(d + d2!)
+print(s + s2)
 ```
 
 ### TypeScript
 
 ```ts
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+let inputString: string = '';
+let inputLines: string[] = [];
+let currentLine: number = 0;
+process.stdin.on('data', function(inputStdin: string): void {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function(): void {
+    inputLines = inputString.split('\n');
+    inputString = '';
+    main();
+});
+
+function readLine(): string {
+    return inputLines[currentLine++];
+}
+
+function main() {
+    let i:number = 4;
+    let d:number = 4;
+    let s: string = 'HackerRank ';
+    
+    let i2 = parseInt(inputLines[0]);
+    let d2 = parseFloat(inputLines[1]);
+    let s2 = inputLines[2];
+    
+    console.log(i + i2);
+    console.log((d + d2).toFixed(1));
+    console.log(s + s2);
+}
 ```
 
 ### VB.NET
 
 ```vb
+Imports System
+
+Module Solution
+    
+    Public Shared Sub Main()
+        Dim i As Integer = 4
+        Dim d As Decimal = 4.0
+        Dim s As String = "HackerRank "
+        
+        Dim i2 As Integer
+        Dim d2 as Decimal
+        Dim s2 as String
+        
+        i2 = Console.ReadLine()
+        d2 = Console.ReadLine()
+        s2 = Console.ReadLine()
+
+        Console.WriteLine(i + i2)
+        Console.WriteLine(d + d2)
+        Console.WriteLine(s + s2)
+
+    End Sub
+End Module
 ```
 
 # Day 2: Operators
