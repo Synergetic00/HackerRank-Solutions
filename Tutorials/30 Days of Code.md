@@ -875,6 +875,202 @@ End Module
 
 # Day 2: Operators
 
+### C
+
+```cpp
+#include <stdio.h>
+#include <math.h>
+
+void solve(double meal_cost, int tip_percent, int tax_percent) {
+    double tip = (tip_percent / 100.0) * meal_cost;
+    double tax = (tax_percent / 100.0) * meal_cost;
+    int total_cost = (int) round(meal_cost + tip + tax);
+    printf("%d", total_cost);
+}
+
+int main() {
+    double meal_cost;
+    int tip_percent;
+    int tax_percent;
+    
+    scanf("%lf", &meal_cost);
+    scanf("%d", &tip_percent);
+    scanf("%d", &tax_percent);
+    
+    solve(meal_cost, tip_percent, tax_percent);
+    
+    return 0;
+}
+```
+
+### Clojure
+
+```clojure
+(def meal_cost (Double.(read-line)))
+(def tip (* (/ meal_cost 100) (Double.(read-line))))
+(def tax (* (/ meal_cost 100) (Double.(read-line))))
+(def total_cost (int (Math/round (+ meal_cost tip tax))))
+(println total_cost)
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+
+int main() {  
+    int tip_percent;
+    int tax_percent;
+    double meal_cost;
+    
+    cin >> meal_cost;
+    cin >> tip_percent;
+    cin >> tax_percent;
+    
+    double tip = meal_cost * tip_percent / 100;
+    double tax = meal_cost * tax_percent / 100;
+    int total_cost = round(meal_cost + tip + tax);
+    
+    printf("%d", total_cost);
+    
+    return 0;
+}
+```
+
+### C#
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Solution
+{
+    public static void Main(string[] args)
+    {
+        double meal_cost = Convert.ToDouble(Console.ReadLine());
+        int tip_percent = Convert.ToInt32(Console.ReadLine());
+        int tax_percent = Convert.ToInt32(Console.ReadLine());
+
+        solve(meal_cost, tip_percent, tax_percent);
+    }
+    
+    public static void solve(double meal_cost, int tip_percent, int tax_percent)
+    {
+        double tip = meal_cost * tip_percent * 0.01;
+        double tax = meal_cost * tax_percent * 0.01;
+        int total_cost = Convert.ToInt32(Math.Round(meal_cost + tip + tax));
+        Console.Write(total_cost);
+    }
+}
+```
+
+### Erlang
+
+```erlang
+-module(solution).
+-export([main/0]).
+
+% Complete the solve function below.
+solve(Meal_cost, Tip_percent, Tax_percent) ->
+    Tip = (Tip_percent / 100) * Meal_cost,
+    Tax = (Tax_percent / 100) * Meal_cost,
+    Total_cost =  round(Meal_cost + Tip + Tax),
+    io:fwrite("~w~n", [round(Total_cost)]).
+
+main() ->
+    {Meal_cost, _} = string:to_float(io:get_line("")),
+    {Tip_percent, _} = string:to_integer(io:get_line("")),
+    {Tax_percent, _} = string:to_integer(io:get_line("")),
+    solve(Meal_cost, Tip_percent, Tax_percent),
+    ok.
+```
+
+### Go
+
+```golang
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### TypeScript
+
+```ts
+```
+
+# Day 3: Intro to Conditional Statements
+
 ### Ada
 
 ```rust
@@ -923,6 +1119,11 @@ End Module
 ### Elixir
 
 ```elixir
+```
+
+### Erlang
+
+```erlang
 ```
 
 ### Fortran
@@ -1055,30 +1256,4864 @@ End Module
 ```vb
 ```
 
-# Day 3: Intro to Conditional Statements
 # Day 4: Class vs. Instance
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 5: Loops
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 6: Let's Review
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 7: Arrays
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 8: Dictionaries and Maps
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 9: Recursion 3
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 10: Binary Numbers
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 11: 2D Arrays
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 12: Inheritance
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 13: Abstract Classes
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 14: Scope
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 15: Linked List
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 16: Exceptions - String to Integer
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 17: More Exceptions
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 18: Queues and Stacks
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 19: Interfaces
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 20: Sorting
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 21: Generics
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 22: Binary Search Trees
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 23: BST Level-Order Traversal
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 24: More Linked Lists
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 25: Running Time and Complexity
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 26: Nested Logic
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 27: Testing
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 28: RegEx, Patterns, and Intro to Databases
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
+
 # Day 29: Bitwise AND
+
+### Ada
+
+```rust
+```
+
+### BASH
+
+```bash
+```
+
+### C
+
+```cpp
+```
+
+### Clojure
+
+```clojure
+```
+
+### COBOL
+
+```cobol
+```
+
+### CoffeeScript
+
+```coffee
+```
+
+### C++ / C++14 / C++20
+
+```cpp
+```
+
+### C#
+
+```cs
+```
+
+### D
+
+```d
+```
+
+### Elixir
+
+```elixir
+```
+
+### Erlang
+
+```erlang
+```
+
+### Fortran
+
+```fortran
+```
+
+### F#
+
+```fsharp
+```
+
+### Go
+
+```golang
+```
+
+### Groovy
+
+```groovy
+```
+
+### Haskell
+
+```haskell
+```
+
+### Java 7 / 8 / 15
+
+```java
+```
+
+### JavaScript (Node.js)
+
+```js
+```
+
+### Julia
+
+```julia
+```
+
+### Kotlin
+
+```kotlin
+```
+
+### Lua
+
+```lua
+```
+
+### Objective-C
+
+```c
+```
+
+### OCaml
+
+```ocaml
+```
+
+### Pascal
+
+```pascal
+```
+
+### Perl
+
+```perl
+```
+
+### PHP
+
+```php
+```
+
+### Python 2 / Pypy 2
+
+```python
+```
+
+### Python 3 / Pypy 3
+
+```python
+```
+
+### Racket
+
+```racket
+```
+
+### Ruby
+
+```ruby
+```
+
+### Rust
+
+```rust
+```
+
+### Common Lisp (SBCL)
+
+```lisp
+```
+
+### Scala
+
+```scala
+```
+
+### Swift
+
+```swift
+```
+
+### Tcl
+
+```tcl
+```
+
+### TypeScript
+
+```ts
+```
+
+### VB.NET
+
+```vb
+```
