@@ -992,21 +992,114 @@ main() ->
 ### Go
 
 ```golang
+package main
+
+import (
+  "fmt"
+  "os"
+  "bufio"
+  "strconv"
+)
+
+func main() {
+    var _ = strconv.Itoa
+    scanner := bufio.NewScanner(os.Stdin)
+
+    scanner.Scan()
+    meal_cost, _ := strconv.ParseFloat(scanner.Text(), 64)
+    scanner.Scan()
+    tip_percent, _ := strconv.ParseUint(scanner.Text(), 10, 64)
+    scanner.Scan()
+    tax_percent, _ := strconv.ParseUint(scanner.Text(), 10, 64)
+    
+    tip := (float64(tip_percent) / 100) * meal_cost
+    tax := (float64(tax_percent) / 100) * meal_cost
+    
+    total_cost := int64(meal_cost + tip + tax + 0.5)
+    
+    fmt.Printf("%d", total_cost)
+}
 ```
 
 ### Haskell
 
 ```haskell
+main = do
+    mec_input <- getLine
+    tip_input <- getLine
+    tax_input <- getLine
+
+    let meal_cost = read mec_input :: Double
+    let tip_percent = read tip_input :: Double
+    let tax_percent = read tax_input :: Double
+    
+    let tip = (0.01 * tip_percent * meal_cost)
+    let tax = (0.01 * tax_percent * meal_cost)
+    let total_cost = meal_cost + tip + tax
+    putStrLn $ show (round total_cost)
 ```
 
 ### Java 7 / 8 / 15
 
 ```java
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double meal_cost = scan.nextDouble();
+        int tip_percent = scan.nextInt();
+        int tax_percent = scan.nextInt();
+        scan.close();
+
+        double tip = tip_percent * (meal_cost / 100);
+        double tax = tax_percent * (meal_cost / 100);
+        int total_cost = (int) Math.round(meal_cost + tip + tax);
+        
+        System.out.println(total_cost);
+    }
+}
 ```
 
 ### JavaScript (Node.js)
 
 ```js
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', function(inputStdin) {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function() {
+    inputString = inputString.split('\n');
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+function solve(meal_cost, tip_percent, tax_percent) {
+    let tip = meal_cost * tip_percent / 100;
+    let tax = meal_cost * tax_percent / 100;
+    let total_cost = Math.round(meal_cost + tax + tip); 
+    console.log(total_cost);
+}
+
+function main() {
+    const meal_cost = parseFloat(readLine().trim());
+    const tip_percent = parseInt(readLine().trim(), 10);
+    const tax_percent = parseInt(readLine().trim(), 10);
+
+    solve(meal_cost, tip_percent, tax_percent);
+}
 ```
 
 ### Kotlin
