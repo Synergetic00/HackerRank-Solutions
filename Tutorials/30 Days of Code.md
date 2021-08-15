@@ -295,7 +295,7 @@ print(inputStr)
 ```c
 #import <Foundation/Foundation.h>
 
-int main (int argc, const char * argv[]) {
+int main (int argc, const char* argv[]) {
     @autoreleasepool {
         char inputStr[105];
         scanf("%[^\n]s", inputStr);
@@ -1097,7 +1097,6 @@ function main() {
     const meal_cost = parseFloat(readLine().trim());
     const tip_percent = parseInt(readLine().trim(), 10);
     const tax_percent = parseInt(readLine().trim(), 10);
-
     solve(meal_cost, tip_percent, tax_percent);
 }
 ```
@@ -1105,61 +1104,206 @@ function main() {
 ### Kotlin
 
 ```kotlin
+fun solve(meal_cost: Double, tip_percent: Int, tax_percent: Int): Unit {
+    val tip = tip_percent * meal_cost * 0.01
+    val tax = tax_percent * meal_cost * 0.01
+    val total_cost = Math.round(meal_cost + tip + tax)
+    println(total_cost)
+}
+
+fun main(args: Array<String>) {
+    val meal_cost = readLine()!!.trim().toDouble()
+    val tip_percent = readLine()!!.trim().toInt()
+    val tax_percent = readLine()!!.trim().toInt()
+    solve(meal_cost, tip_percent, tax_percent)
+}
 ```
 
 ### Lua
 
 ```lua
+function solve(meal_cost, tip_percent, tax_percent)
+    tip = meal_cost * tip_percent * 0.01
+    tax = meal_cost * tax_percent * 0.01
+    total_cost = meal_cost + tip + tax
+    print(math.floor(total_cost+0.5))
+end
+
+local meal_cost = io.stdin:read("*n", "*l")
+local tip_percent = io.stdin:read("*n", "*l")
+local tax_percent = io.stdin:read("*n", "*l")
+
+solve(meal_cost, tip_percent, tax_percent)
 ```
 
 ### Objective-C
 
 ```c
+#import <Foundation/Foundation.h>
+
+int main(int argc, const char* argv[]) {
+    @autoreleasepool {
+        double meal_cost;
+        int tip_percentage;
+        int tax_percentage;
+        
+        scanf("%lf", &meal_cost);
+        scanf("%d", &tip_percentage);
+        scanf("%d", &tax_percentage);
+        
+        double tip = meal_cost * tip_percentage * 0.01;
+        double tax = meal_cost * tax_percentage * 0.01;
+        int total_cost = (int) round(meal_cost + tip + tax);
+        printf("%d", total_cost);
+    }
+    return 0;
+}
 ```
 
 ### Perl
 
 ```perl
+$meal_cost = <STDIN>;
+$tip_percent = <STDIN>;
+$tax_percent = <STDIN>;
+
+$tip = $tip_percent * ($meal_cost / 100);
+$tax = $tax_percent * ($meal_cost / 100);
+$total_cost = int($meal_cost + $tip + $tax + 0.5);
+
+print $total_cost;
 ```
 
 ### PHP
 
 ```php
+<?php
+$sc = fopen("php://stdin", "r");
+$mealCost = fgets($sc);
+$tipPercent = fgets($sc);
+$taxPercent = fgets($sc);
+
+$tax = $mealCost * ($taxPercent / 100.00);
+$tip = $mealCost * ($tipPercent / 100.00);
+$totalCost = round($mealCost + $tax + $tip);
+printf($totalCost);
+?>
 ```
 
 ### Python 2 / Pypy 2
 
 ```python
+meal_cost = float(raw_input().strip())
+tip_percent = int(raw_input().strip())
+tax_percent = int(raw_input().strip())
+
+tip = meal_cost * tip_percent * 0.01
+tax = meal_cost * tax_percent * 0.01
+total_cost = int(meal_cost + tip + tax + 0.5)
+print total_cost
 ```
 
 ### Python 3 / Pypy 3
 
 ```python
-```
+meal_cost = float(input().strip())
+tip_percent = int(input().strip())
+tax_percent = int(input().strip())
 
-### Racket
-
-```racket
+tip = meal_cost * tip_percent * 0.01
+tax = meal_cost * tax_percent * 0.01
+total_cost = int(meal_cost + tip + tax + 0.5)
+print(total_cost)
 ```
 
 ### Ruby
 
 ```ruby
+meal_cost = gets.to_f
+tip_percent = gets.to_f
+tax_percent = gets.to_f
+
+tip = tip_percent * meal_cost * 0.01
+tax = tax_percent * meal_cost * 0.01
+total_cost = (meal_cost + tip + tax).round
+
+puts total_cost
 ```
 
 ### Scala
 
 ```scala
+object Solution {
+    def main(args: Array[String]) {
+        val meal_cost = scala.io.StdIn.readDouble()
+        val tip_percent = scala.io.StdIn.readInt()
+        val tax_percent = scala.io.StdIn.readInt()
+        
+        val tip = meal_cost * tip_percent * 0.01
+        val tax = meal_cost * tax_percent * 0.01
+        val total_cost = math.round(meal_cost + tip + tax)
+        
+        println(total_cost)
+    }
+}
 ```
 
 ### Swift
 
 ```swift
+import Foundation
+
+let meal_cost = Double(readLine()!)!;
+let tip_percent = Double(readLine()!)!;
+let tax_percent = Double(readLine()!)!;
+
+let tip = meal_cost * tip_percent * 0.01;
+let tax = meal_cost * tax_percent * 0.01;
+let total_cost = Int(round(meal_cost + tax + tip));
+
+print(total_cost);
 ```
 
 ### TypeScript
 
 ```ts
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString: string = '';
+let inputLines: string[] = [];
+let currentLine: number = 0;
+
+process.stdin.on('data', function(inputStdin: string): void {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function(): void {
+    inputLines = inputString.split('\n');
+    inputString = '';
+
+    main();
+});
+
+function readLine(): string {
+    return inputLines[currentLine++];
+}
+
+function solve(meal_cost: number, tip_percent: number, tax_percent: number): void {
+    const tip: number = (meal_cost * tip_percent) / 100;
+    const tax: number = (meal_cost * tax_percent) / 100;
+    const total_cost: number = Math.floor(meal_cost + tip + tax + 0.5);
+    console.log(total_cost);
+}
+
+function main() {
+    const meal_cost: number = parseFloat(readLine().trim());
+    const tip_percent: number = parseInt(readLine().trim(), 10);
+    const tax_percent: number = parseInt(readLine().trim(), 10);
+    solve(meal_cost, tip_percent, tax_percent);
+}
 ```
 
 # Day 3: Intro to Conditional Statements
