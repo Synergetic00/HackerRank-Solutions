@@ -1446,6 +1446,12 @@ function main() {
 ### Python 3 / Pypy 3
 
 ```python
+N = int(input().strip())
+
+if N % 2 != 0:
+    print('Weird')
+else:
+    print('Weird' if N >= 6 and N <= 20 else 'Not Weird')
 ```
 
 ### Racket
