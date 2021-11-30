@@ -7,7 +7,7 @@
 | C                         | No        | 0      | 620
 | C++                       | No        | 10     | 1085
 | Data Structures           | No        | 0      | 7660
-| Databases                 | No        | 0      | 499
+| Databases                 | No        | 47     | 499
 | Distributed Systems       | No        | 110    | N/A
 | Functional Programming    | No        | 3      | 4012
 | Java                      | Yes       | 933    | 933
