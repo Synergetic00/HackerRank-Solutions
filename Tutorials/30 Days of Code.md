@@ -6196,11 +6196,6 @@ else:
 ```clojure
 ```
 
-### COBOL
-
-```cobol
-```
-
 ### CoffeeScript
 
 ```coffee
@@ -6314,6 +6309,11 @@ else:
 ### Python 3 / Pypy 3
 
 ```python
+```
+
+### R
+
+```r
 ```
 
 ### Racket
